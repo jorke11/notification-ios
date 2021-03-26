@@ -24,6 +24,7 @@
 		149C458A22D1456E00647EB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		149C458D22D1456E00647EB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		149C458F22D1456E00647EB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		149C459522D145B700647EB1 /* Notification.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Notification.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +57,7 @@
 		149C457F22D1456C00647EB1 /* Notification */ = {
 			isa = PBXGroup;
 			children = (
+				149C459522D145B700647EB1 /* Notification.entitlements */,
 				149C458022D1456C00647EB1 /* AppDelegate.swift */,
 				149C458222D1456C00647EB1 /* ViewController.swift */,
 				149C458422D1456C00647EB1 /* Main.storyboard */,
@@ -99,6 +101,14 @@
 				TargetAttributes = {
 					149C457C22D1456C00647EB1 = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -286,7 +296,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Notification/Notification.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BDRNLZRR8P;
 				INFOPLIST_FILE = Notification/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -303,7 +315,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Notification/Notification.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BDRNLZRR8P;
 				INFOPLIST_FILE = Notification/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
